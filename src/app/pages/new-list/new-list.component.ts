@@ -21,4 +21,13 @@ export class NewListComponent implements OnInit {
     });
   }
 
+  onSubmit(f: any) {
+    console.log(f.value);
+    console.log(f.valid); 
+    this.taskService.createlist(f.value).subscribe((response: any) => {
+      console.log(response);
+
+      //redirect to start
+  });
+  }
 }

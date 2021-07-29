@@ -9,8 +9,8 @@ export class TaskService {
 
   constructor(private webReqService: WebrequestService) { }
 
-  createlist(title: string) {
-     return this.webReqService.post('tasks', {title});
+  createlist(body: any) {
+     return this.webReqService.post('tasks', body);
   }
 
   getLists() {

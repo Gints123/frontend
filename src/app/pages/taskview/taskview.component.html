@@ -1,0 +1,52 @@
+<div class="centered-content">
+    <div class="task-manager-container">
+        
+        <div class="tasks-list-container has-background-light">
+            <h1 class="title has-text-primary">
+                Tasks
+            </h1>
+
+            <div class="div-table">
+                <table class="table">
+                    <tr>
+                    <th class="spacing">id</th>
+                    <th class="spacing">Task name</th>
+                    <th class="spacing">Worker</th>
+                    <th class="spacing">Time spent</th>
+                    <th class="spacing">Sub-tasks</th>
+                    <th class="spacing">Update</th>
+                    <th class="spacing">Delete</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>test</td>
+                        <td>John</td>
+                        <td>1</td>
+                        <td><button class="button is-info">Sub tasks</button></td>
+                        <td>
+                            <button class="button is-success">Update</button>
+                        </td>
+                        <td>
+                            <button class="button is-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr *ngFor= "let list of lists">
+                    <td>{{ list.task_id}}</td>
+                    <td>{{ list.title}}</td>
+                    <td>{{ list.worker}}</td>
+                    <td>{{ list.time_spent}}</td>
+                    <td><button class="button is-info">Sub tasks</button></td>
+                    <td><button class="button is-success">Update</button></td>
+                    <td><button class="button is-danger" (click)="onDeleteTask(list.task_id)">Delete</button></td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="options">
+                <button class="button is-primary has-text-white" routerLink="/new-task">+ New task </button>
+            </div>
+
+        </div>
+    </div>
+</div>

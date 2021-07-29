@@ -1,0 +1,35 @@
+<div class="centered-content">
+    <div class="model-box">
+        <h1 class="title">
+            Create a new task
+        </h1>
+        <form #newTask = "ngForm">
+        <div class="field">
+          <label class="label">Task name</label>
+          <div class="control">
+            <input class="input" ngModel type="text" placeholder="Create new task">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Employee</label>
+          <div class="control">
+            <input class="input" ngModel type="text" placeholder="John">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Time spent</label>
+          <div class="control">
+            <input class="input" ngModel type="text" placeholder="Input hours spent">
+          </div>
+        </div>
+        </form>
+
+        <div class="cancel">
+        <button routerLink="/tasks" class="button">Cancel</button>
+        </div>
+        <div class="create">
+          <button class="button is-primary has-text-white" routerLink="/tasks" type="submit">Create</button>
+      </div>
+        
+    </div>
+</div>

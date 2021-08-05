@@ -1,9 +1,15 @@
 <div class="centered-content">
     <div class="model-box">
         <h1 class="title">
-            Create a new task
+            Update a task
         </h1>
-        <form #f = "ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <form #u = "ngForm" (ngSubmit)="onUpdate(u)" novalidate>
+          <div class="field">
+            <label class="label">id</label>
+            <div class="control">
+              <input name="id" class="input" ngModel type="text" placeholder="Create new task">
+            </div>
+          </div>
         <div class="field">
           <label class="label">Task name</label>
           <div class="control">
@@ -23,7 +29,7 @@
           </div>
         </div>
         <div class="create">
-          <button class="button is-primary has-text-white" >Create</button>
+          <button class="button is-primary has-text-white">Create</button>
       </div>
         </form>
 

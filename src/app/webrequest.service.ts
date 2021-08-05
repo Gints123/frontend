@@ -19,8 +19,8 @@ export class WebrequestService {
     return this.http.post(`${this.root_url}/${uri}`, payload);
   }
 
-  patch(uri: string, payload: Object) {
-    return this.http.patch(`${this.root_url}/${uri}`, payload);
+  put(uri: string, payload: Object) {
+    return this.http.put(`${this.root_url}/${uri}`, payload);
   }
 
   delete(uri: string) {

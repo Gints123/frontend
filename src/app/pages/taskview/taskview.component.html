@@ -18,27 +18,14 @@
                     <th class="spacing">Delete</th>
                     </tr>
 
-                    <tr>
-                        <td>1</td>
-                        <td>test</td>
-                        <td>John</td>
-                        <td>1</td>
-                        <td><button class="button is-info">Sub tasks</button></td>
-                        <td>
-                            <button class="button is-success">Update</button>
-                        </td>
-                        <td>
-                            <button class="button is-danger">Delete</button>
-                        </td>
-                    </tr>
                     <tr *ngFor= "let list of lists">
-                    <td>{{ list.task_id}}</td>
+                    <td>{{ list.id}}</td>
                     <td>{{ list.title}}</td>
                     <td>{{ list.worker}}</td>
                     <td>{{ list.time_spent}}</td>
                     <td><button class="button is-info">Sub tasks</button></td>
-                    <td><button class="button is-success">Update</button></td>
-                    <td><button class="button is-danger" (click)="onDeleteTask(list.task_id)">Delete</button></td>
+                    <td><button class="button is-success" [routerLink]="['/update-task', list.id]">Update</button></td>
+                    <td><button class="button is-danger" (click)="onDeleteTask(list.id)">Delete</button></td>
                     </tr>
                 </table>
 
